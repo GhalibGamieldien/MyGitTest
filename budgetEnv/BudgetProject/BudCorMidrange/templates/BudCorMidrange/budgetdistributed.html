@@ -1,0 +1,123 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+Budget Distribution
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-4 head">
+      <ul class=head4>
+        <li><h4>AIX Service</h4></li> 
+      </ul>
+    </div>
+    <div class="col-4 head">
+      <ul class=head4>
+        <li><h4>LINUX Service</h4></li> 
+      </ul>
+    </div>
+    <div class="col-4 head">
+      <ul class=head4>
+        <li><h4>LINUX - Santam and SKY</h4></li>  
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 menu">
+       <ul>
+          <li>Tier 1 CPU Monthly</li>
+          <li>Tier 1 RAM Monthly</li>
+          <li>Tier 1 Hardware Maint.</li>
+          <li>Tier 1 Software Maint.</li>
+          <li>Tier 2 CPU Monthly</li>
+          <li>Tier 2 RAM Monthly</li>
+          <li>Tier 2 Hardware Maint.</li>
+          <li>Tier 2 Software maint.</li>
+          <li>Power H.A. Maint.</li>            
+          <li>Group D.C. Services</li>
+          <li>D.C. Tech. Services</li>
+       </ul>
+    </div>
+    <div class="col-2 menu">
+      <ul>
+         <li>R {{ w_t1_pht_cpu_recovery_need|intcomma }}</li>
+         <li>R {{ w_t1_pht_ram_recovery_need|intcomma }}</li>
+         <li>R {{ w_t1_pht_hwm|intcomma }}</li>
+         <li>R {{ w_t1_pht_sfm|intcomma }}</li>
+         <li>R {{ w_t2_pht_cpu_recovery_need|intcomma }}</li>
+         <li>R {{ w_t2_pht_ram_recovery_need|intcomma }}</li>
+         <li>R {{ w_t2_pht_hwm|intcomma }}</li>
+         <li>R {{ w_t2_pht_sfm|intcomma }}</li>
+         <li>R {{ w_PHA_sls_mnt|intcomma }}</li>
+         <li>R {{ w_gti_AIX|intcomma }}</li>            
+         <li>R {{ w_esc_AIX|intcomma }}</li>                        
+      </ul>
+    </div>
+     <div class="col-2 menu">
+       <ul>
+         <li>CPU & Mem</li>
+         <li>Hardware Maint.</li>
+         <li>RedHat</li>
+         <li>Group D.C. Service</li>
+         <li>D.C. Tech. Service</li> 
+         <li>SUSE</li> 
+       </ul>
+     </div>
+    <div class="col-2 menu">
+       <ul>
+         <li>Other Budget</li> 
+         <li>Other Budget</li> 
+         <li>R {{ w_RedHat_sls_mnt|intcomma }}</li>
+         <li>R {{ w_gti_LINUX|intcomma }}</li>
+         <li>R {{ w_esc_LINUX|intcomma }}</li>
+         <li>R {{ w_SUSE_sls_mnt|intcomma }}</li>  
+       </ul>
+    </div>
+    <div class="col-2 menu">
+       <ul>
+         <li>Santam CPU & Mem</li>
+         <li>Santam Hardware Maint.</li>
+         <li>Santam RedHat</li> 
+         <li>Santam Group D.C. Service</li> 
+         <li>Santam D.C. Tech. Service</li>
+         <li>SKY RedHat</li>
+       </ul>
+    </div>
+     <div class="col-2 menu">
+       <ul>
+         <li>Other Budget</li> 
+         <li>Other Budget</li> 
+         <li>Other Budget</li> 
+         <li>Other Budget</li> 
+         <li>R {{ w_esc_LINUX_Santam|intcomma }}</li>
+         <li>Other Budget</li>
+       </ul>
+     </div>
+
+
+     <div class=row>
+      <div class="col-4 menu">
+       <ul>
+         <li>
+          <form name="BudgetYearForm" method="POST">
+            {% csrf_token %}
+            <div>
+              <input type="number" size=4 placeholder="{{ budgetyear}}" name="budgetyear">
+              <button type="submit" class="save btn btn-default" formaction="{% url 'tariffs' %}">Generate Tariffs</button>
+             </div>
+          </form>
+         </li>
+
+       </ul>
+      </div>
+      <div class="col-8 menu">
+          <ul class=head4>
+           <li>
+              <h3>Budgets have been distributed for Year: <strong> {{ budgetyear}} </strong> </h3> 
+           </li>  
+          </ul>  
+      </div>
+ 
+   </div>
+{% endblock %}  
+
+

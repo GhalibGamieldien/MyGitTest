@@ -1,0 +1,5 @@
+2020/05/24 20:53:53 [emerg] 1445#1445: open() "/home/ghalib/anaconda3/envs/budgetEnv/nginx.conf" failed (2: No such file or directory)
+2020/05/24 20:54:27 [warn] 1449#1449: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /home/ghalib/anaconda3/envs/budgetEnv/BudgetProject/nginx.conf:1
+2020/05/24 20:54:27 [emerg] 1449#1449: "server" directive is not allowed here in /home/ghalib/anaconda3/envs/budgetEnv/BudgetProject/nginx.conf:7
+2020/05/24 20:55:38 [emerg] 1453#1453: unknown directive "master" in /home/ghalib/anaconda3/envs/budgetEnv/BudgetProject/nginx.conf:1
+2020/05/24 20:56:03 [emerg] 1457#1457: "server" directive is not allowed here in /home/ghalib/anaconda3/envs/budgetEnv/BudgetProject/nginx.conf:6

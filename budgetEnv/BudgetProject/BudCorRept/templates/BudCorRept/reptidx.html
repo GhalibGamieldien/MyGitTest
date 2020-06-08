@@ -1,0 +1,94 @@
+{% extends "BudCor/layout.html" %}
+{% block title %}
+Home 
+{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul class=head4>
+      <li><h3>Server Reports</h3></li> 
+    </ul>
+  </div>
+  <div class="col-3 menu">
+    <ul class=head4>
+      <li><h3>Cost Centre Reports</h3></li> 
+    </ul>
+  </div>
+  <div class="col-4 menu">
+    <ul class=head4>
+      <li><h3>Comparison</h3></li>  
+    </ul>
+  </div>
+</div>
+<div class="row">
+    <div class="col-3 menu">
+      <ul>
+        <li>
+          <form name="ApplicationServerForm" method="POST">
+            {% csrf_token %}
+              <input type="number" size=4 placeholder="Year" name="budgetyear">
+              <input type="text" size=20 placeholder="Server Name" name="servername">
+              <button type="submit" class="save btn btn-default" formaction="{% url 'appsrvdets' %}">Application Server Details</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="col-3 menu">
+      <ul>
+        <li>
+          <form name="CostCentreForm" method="POST">
+            {% csrf_token %}
+              <input type="number" size=4 placeholder="Year" name="budgetyear">
+              <input type="text" size=12 placeholder="BB" name="costcentre">
+              <button type="submit" class="save btn btn-default" formaction="{% url 'costcentre' %}">Cost Centre</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="col-4 menu">
+      <ul>
+        <li>
+          <form name="AppServerBillingCompForm" method="POST">
+            {% csrf_token %}
+              <input type="number" size=4 placeholder="Year1" name="budgetyear1">
+              <input type="number" size=4 placeholder="Year2" name="budgetyear2">
+              <input type="text" size=20 placeholder="Server Name" name="servername">
+              <button type="submit" class="save btn btn-default" formaction="{% url 'appservercomp' %}">Server Cost Comparison</button>
+          </form>
+        </li>
+        <li>
+          <form name="CostCentreCompForm" method="POST">
+            {% csrf_token %}
+              <input type="number" size=4 placeholder="Year1" name="budgetyear1">
+              <input type="number" size=4 placeholder="Year2" name="budgetyear2">
+              <input type="text" size=20 placeholder="Cost Centre" name="costcentre">
+              <button type="submit" class="save btn btn-default" formaction="{% url 'costcentrecomp' %}">Cost Centre Cost Comparison</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+</div>
+<div class="row">
+  <div class="col-10 menu">
+    <ul>
+      <li><a href="{% url 'list_messages' %}" class=button btn-sm>List Messages</a></li>
+    </ul>
+  </div>
+</div>
+
+{% else %}
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li><h3>You are not logged in</h3></li>
+      <li><a href="{% url 'login' %}"><h2>Login</h2></a></li>
+  </ul>
+</div>
+</div>
+{% endif %}
+  
+{% endblock %}

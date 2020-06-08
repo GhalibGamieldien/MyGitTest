@@ -1,0 +1,96 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+ Application Server Details
+{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-6 head">
+    <ul class=head4>
+      <li><h4>Server Annotation Details</h4></li> 
+    </ul>
+  </div>
+  <div class="col-4 head">
+    <ul class=head4>
+      <li><h4>Server cost Details</h4></li> 
+    </ul>
+   </div>
+</div>
+<div class="row">
+  <div class="col-2 menu">
+    <ul>
+       <li>Client</li>
+       <li>Application</li>
+       <li>Description</li>
+       <li>Application Owner</li>
+       <li>Technical Owner</li>
+    </ul>
+  </div> 
+  <div class="col-4 menu">
+    <ul>    
+      <li>{{ wsrv_client }} </li>
+       <li>{{ wsrv_application }} </li>
+       <li>{{ wsrv_serverdescription }} </li>
+       <li>{{ wsrv_appowner }}</li>
+       <li>{{ wsrv_primarytechowner }} </li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>
+       <li>Hardware</li>
+       <li>Software</li>
+       <li>High Availability</li>
+       <li>Group Data Centre</li>
+
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>
+       <li>R {{ wasb_srv_tin|intcomma }}</li>
+       <li>R {{ wasb_srv_sfm|intcomma }}</li>
+       <li>R {{ wasb_srv_ha|intcomma }}</li>
+       <li>R {{ wasb_srv_gti|intcomma }}</li>
+    </ul>
+  </div> 
+
+</div>
+<div class="row">
+    <div class="col-2 menu">
+      <ul>
+        <li>Operating System</li>
+        <li>Competency</li>
+        <li>Physical Host</li>
+      </ul>
+    </div> 
+    <div class="col-4 menu">
+      <ul>  
+        <li>{{ wsrv_OS }} </li> 
+        <li>{{ wsrv_competency }} </li>
+        <li>{{ wsrv_phs_name }} </li>
+      </ul>
+    </div> 
+</div>
+
+<div class="row"></div>
+<div class="col-3 menu">
+  <ul>
+     <li>
+       <form name="ApplicationServerForm" method="POST">
+        {% csrf_token %}
+        <input type="number" size=4 placeholder="{{ budgetyear }}" name="budgetyear">
+        <input type="text" size=20 placeholder="Server Name" name="servername">
+        <br>
+        <button type="submit" class="save btn btn-default" formaction="{% url 'appsrvdets' %}">Application Server Details</button>
+       </form>
+    </li>
+   </ul>
+ </div>
+  <div class="col-9 menu">
+    <ul class=head4>
+      <li>
+         <h3>Billing Report: Application Server <strong>{{ wname }} </strong> monthly cost <strong>R {{ wasb_tot_srv|intcomma }}</strong> for Cost Centre <strong> {{ wsrv_billingcc}} </strong>  for Year: <strong> {{ budgetyear}} </strong> </h3> 
+      </li>  
+    </ul>        
+  </div>
+</div>
+{% endblock %}

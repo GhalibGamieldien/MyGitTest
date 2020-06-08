@@ -1,0 +1,46 @@
+{% extends "BudCor/layout.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+  <div class="row">
+    <div class="col-6 head">
+      <ul class=head4>
+        <li><h3>Your username and password didn't match. Please try again.</h3></li> 
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if next %}
+    {% if user.is_authenticated %}
+    <div class="row">
+      <div class="col-6 head">
+        <ul class=head4>
+          <li><h4>Your account doesn't have access to this page.</h4></li> 
+          <li><h4>To proceed, please login with an account that has access.</h4></li> 
+        </ul>
+      </div>
+    </div>
+    
+    {% else %}
+    <div class="row">
+      <div class="col-6 head">
+        <ul class=head4>
+          <li><h4>Please login to see this page.</h4></li> 
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
+  
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  
+  {# Assumes you setup the password_reset view in your URLconf #}
+  {# <p><a href="{% url 'password_reset' %}">Lost password?</a></p> #}
+  
+{% endblock %}

@@ -1,0 +1,238 @@
+{
+  "build": "hf7769d2_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libgd >=2.2.5,<2.3.0a0",
+    "libgfortran-ng >=7,<8.0a0",
+    "libstdcxx-ng >=7.3.0",
+    "libxml2 >=2.9.8,<2.10.0a0",
+    "libxslt >=1.1.32,<2.0a0",
+    "openssl >=1.1.1a,<1.1.2a",
+    "pcre >=8.42,<9.0a0",
+    "zlib >=1.2.11,<1.3.0a0"
+  ],
+  "extracted_package_dir": "/home/ghalib/anaconda3/pkgs/nginx-1.15.5-hf7769d2_0",
+  "features": "",
+  "files": [
+    "bin/nginx",
+    "etc/nginx/default-site/50x.html",
+    "etc/nginx/default-site/index.html",
+    "etc/nginx/fastcgi.conf",
+    "etc/nginx/fastcgi_params",
+    "etc/nginx/koi-utf",
+    "etc/nginx/koi-win",
+    "etc/nginx/mime.types",
+    "etc/nginx/nginx.conf",
+    "etc/nginx/nginx.conf.default",
+    "etc/nginx/scgi_params",
+    "etc/nginx/sites.d/default-site.conf",
+    "etc/nginx/uwsgi_params",
+    "etc/nginx/win-utf",
+    "lib/nginx/modules/ngx_http_image_filter_module.so",
+    "lib/nginx/modules/ngx_http_xslt_filter_module.so",
+    "lib/nginx/modules/ngx_stream_module.so",
+    "sbin/nginx",
+    "var/log/nginx/access.log",
+    "var/log/nginx/error.log",
+    "var/run/.mkdir",
+    "var/tmp/nginx/client/.mkdir"
+  ],
+  "fn": "nginx-1.15.5-hf7769d2_0.conda",
+  "legacy_bz2_md5": "fcbd7a8c7e1e0b23a4a5266bf70eabbf",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/ghalib/anaconda3/pkgs/nginx-1.15.5-hf7769d2_0",
+    "type": 1
+  },
+  "md5": "9cc2c4eed17c2d7aacf16b369cdb60ba",
+  "name": "nginx",
+  "package_tarball_full_path": "/home/ghalib/anaconda3/pkgs/nginx-1.15.5-hf7769d2_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/nginx",
+        "path_type": "hardlink",
+        "sha256": "e4bb54fd744511e7a4d697f8a884a43e66a88c3f62a66715844f7be82032788b",
+        "sha256_in_prefix": "e4bb54fd744511e7a4d697f8a884a43e66a88c3f62a66715844f7be82032788b",
+        "size_in_bytes": 279
+      },
+      {
+        "_path": "etc/nginx/default-site/50x.html",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "d11dc22c73306cd84bc9869302b02dc8604d596185203a74dd0042c5d2fdd3be",
+        "sha256_in_prefix": "d11dc22c73306cd84bc9869302b02dc8604d596185203a74dd0042c5d2fdd3be",
+        "size_in_bytes": 494
+      },
+      {
+        "_path": "etc/nginx/default-site/index.html",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "38ffd4972ae513a0c79a8be4573403edcd709f0f572105362b08ff50cf6de521",
+        "sha256_in_prefix": "38ffd4972ae513a0c79a8be4573403edcd709f0f572105362b08ff50cf6de521",
+        "size_in_bytes": 612
+      },
+      {
+        "_path": "etc/nginx/fastcgi.conf",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "b2c3d480a58f61f3a7dc61850b461e892e36f236317765a4f2f6d558c928fa57",
+        "sha256_in_prefix": "b2c3d480a58f61f3a7dc61850b461e892e36f236317765a4f2f6d558c928fa57",
+        "size_in_bytes": 1077
+      },
+      {
+        "_path": "etc/nginx/fastcgi_params",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "f37852d0113de30fa6bfc3d9b180ef99383c06739530dd482a8538503afd5a58",
+        "sha256_in_prefix": "f37852d0113de30fa6bfc3d9b180ef99383c06739530dd482a8538503afd5a58",
+        "size_in_bytes": 1007
+      },
+      {
+        "_path": "etc/nginx/koi-utf",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "b5f8a6d411db5e5d11d151d50cd1e962444732593adec0e1ef0a8c6eebec63ee",
+        "sha256_in_prefix": "b5f8a6d411db5e5d11d151d50cd1e962444732593adec0e1ef0a8c6eebec63ee",
+        "size_in_bytes": 2837
+      },
+      {
+        "_path": "etc/nginx/koi-win",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "de518a9eafe86c8bc705e296d0ef26135835b46bdc0de01d1d50a630fa5d341e",
+        "sha256_in_prefix": "de518a9eafe86c8bc705e296d0ef26135835b46bdc0de01d1d50a630fa5d341e",
+        "size_in_bytes": 2223
+      },
+      {
+        "_path": "etc/nginx/mime.types",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "7f0b9e0c2320db6882b6d0db1cb3d28c41dd4ff0d1c6e17798ff19668f412598",
+        "sha256_in_prefix": "7f0b9e0c2320db6882b6d0db1cb3d28c41dd4ff0d1c6e17798ff19668f412598",
+        "size_in_bytes": 5231
+      },
+      {
+        "_path": "etc/nginx/nginx.conf",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "a844c1c364951ea0706573cd3d1f0adc1d1fe25fdc575474e1df24ed1d62e0d3",
+        "sha256_in_prefix": "a844c1c364951ea0706573cd3d1f0adc1d1fe25fdc575474e1df24ed1d62e0d3",
+        "size_in_bytes": 4605
+      },
+      {
+        "_path": "etc/nginx/nginx.conf.default",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "95363d79620c1b3eb6951711b6630a411f147bc9197bc91442c0605cf6688e46",
+        "sha256_in_prefix": "95363d79620c1b3eb6951711b6630a411f147bc9197bc91442c0605cf6688e46",
+        "size_in_bytes": 2656
+      },
+      {
+        "_path": "etc/nginx/scgi_params",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "f27b2027c571ccafcfb0fbb3f54d7aeee11a984e3a0f5a1fdf14629030fc9011",
+        "sha256_in_prefix": "f27b2027c571ccafcfb0fbb3f54d7aeee11a984e3a0f5a1fdf14629030fc9011",
+        "size_in_bytes": 636
+      },
+      {
+        "_path": "etc/nginx/sites.d/default-site.conf",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "186cc30c218488c993fbbd3e555d1bd2698f5c63b8d5418319ecae310417d942",
+        "sha256_in_prefix": "186cc30c218488c993fbbd3e555d1bd2698f5c63b8d5418319ecae310417d942",
+        "size_in_bytes": 391
+      },
+      {
+        "_path": "etc/nginx/uwsgi_params",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "015cb581c2eb84b1a1ac9b575521d5881f791f632bfa62f34b26ba97d70c0d4f",
+        "sha256_in_prefix": "015cb581c2eb84b1a1ac9b575521d5881f791f632bfa62f34b26ba97d70c0d4f",
+        "size_in_bytes": 664
+      },
+      {
+        "_path": "etc/nginx/win-utf",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "55adf050bad0cb60cbfe18649f8f17cd405fece0cc65eb78dac72c74c9dad944",
+        "sha256_in_prefix": "55adf050bad0cb60cbfe18649f8f17cd405fece0cc65eb78dac72c74c9dad944",
+        "size_in_bytes": 3610
+      },
+      {
+        "_path": "lib/nginx/modules/ngx_http_image_filter_module.so",
+        "path_type": "hardlink",
+        "sha256": "3cae552e22c0232c468fa6478f34b2879a9d614b5f5c66d5c9b5e7759df03ee2",
+        "sha256_in_prefix": "3cae552e22c0232c468fa6478f34b2879a9d614b5f5c66d5c9b5e7759df03ee2",
+        "size_in_bytes": 32656
+      },
+      {
+        "_path": "lib/nginx/modules/ngx_http_xslt_filter_module.so",
+        "path_type": "hardlink",
+        "sha256": "88aa39513b66104165dee57159941305034676649f993615fd18f0d89e9ab81c",
+        "sha256_in_prefix": "88aa39513b66104165dee57159941305034676649f993615fd18f0d89e9ab81c",
+        "size_in_bytes": 28936
+      },
+      {
+        "_path": "lib/nginx/modules/ngx_stream_module.so",
+        "path_type": "hardlink",
+        "sha256": "d5652fecb76b14cc4a0c487752cadbce66c1e9753ff12546894e9d733acbcc01",
+        "sha256_in_prefix": "d5652fecb76b14cc4a0c487752cadbce66c1e9753ff12546894e9d733acbcc01",
+        "size_in_bytes": 161440
+      },
+      {
+        "_path": "sbin/nginx",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/nginx_1540591303511/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "094aef2bf179a300a6fbf8baf3fb5fb3218fcddc59e58f39ab2f874888513ce6",
+        "sha256_in_prefix": "c047fcb815c915dc612a544f708ea97e0545b9e6247bbf07d60c4108afbafd20",
+        "size_in_bytes": 1203856
+      },
+      {
+        "_path": "var/log/nginx/access.log",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "var/log/nginx/error.log",
+        "no_link": true,
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "var/run/.mkdir",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "var/tmp/nginx/client/.mkdir",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "nginx",
+  "sha256": "24fa16e08ae2c737d33b358297533e626c75fea3d9c3d019408ff59965a60e02",
+  "size": 507435,
+  "subdir": "linux-64",
+  "timestamp": 1540591370849,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/nginx-1.15.5-hf7769d2_0.conda",
+  "version": "1.15.5"
+}

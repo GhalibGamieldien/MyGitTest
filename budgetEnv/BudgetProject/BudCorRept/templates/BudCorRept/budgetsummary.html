@@ -1,0 +1,83 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+Budget Summary
+{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-5 head">
+    <ul class=head4>
+      <li><h4>Budget Item</h4></li> 
+    </ul>
+  </div>
+  <div class="col-3 head">
+    <ul class=head4>
+      <li><h4>Budget Amount</h4></li> 
+    </ul>
+   </div>
+   <div class="col-3 head">
+     <ul class=head4>
+       <li><h4>Invoice Amount</h4></li>  
+     </ul>
+   </div>
+</div>
+<div class="row">
+  <div class="col-5 menu">
+    <ul>
+       <li>AIX Depreciation</li>
+       <li>AIX Maintenance</li>
+       <li>AIX Group DC Service</li>
+       <li>AIX DC Service Provider</li>
+       <li>LINUX Software</li>
+       <li>LINUX Group DC Services</li>
+       <li>LINUX DC Service Provider</li>
+       <li>LINUX DC Service Provider (Santam)</li>
+
+    </ul>
+  </div>
+  <div class="col-3 menu">
+    <ul>
+       <li>R {{ wbgt_dpre_AIX|intcomma }}</li>
+       <li>R {{ wbgt_mnt_AIX|intcomma }}</li>
+       <li>R {{ wbgt_gti_AIX|intcomma }}</li>
+       <li>R {{ wbgt_esc_AIX|intcomma }}</li>
+       <li>R {{ wbgt_sfm_LINUX|intcomma }}</li>
+       <li>R {{ wbgt_gti_LINUX|intcomma }}</li>
+       <li>R {{ wbgt_esc_LINUX|intcomma }}</li>
+       <li>R {{ wbgt_esc_LINUX_Santam|intcomma }}</li>
+    </ul>
+  </div>
+  <div class="col-3 menu">
+    <ul>
+       <li>R {{ wbgt_inv_dpre_AIX|intcomma }}</li>
+       <li>R {{ wbgt_inv_mnt_AIX|intcomma }}</li>
+       <li>R {{ wbgt_inv_gti_AIX|intcomma }}</li>
+       <li>R {{ wbgt_inv_esc_AIX|intcomma }}</li>
+       <li>R {{ wbgt_inv_sfm_LINUX|intcomma }}</li>
+       <li>R {{ wbgt_inv_gti_LINUX|intcomma }}</li>
+       <li>R {{ wbgt_inv_esc_LINUX|intcomma }}</li>
+       <li>R {{ wbgt_inv_esc_LINUX_Santam|intcomma }}</li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-4 menu">
+     <ul>
+       <li>
+        <form name="CostCentreForm" method="POST">
+          {% csrf_token %}
+            <input type="number" size=4 placeholder="Budget Year" name="budgetyear">
+            <input type="text" size=12 placeholder="Cost Centre" name="costcentre">
+            <button type="submit" class="save btn btn-default" formaction="{% url 'costcentre' %}">Cost Centre</button>
+         </form>
+       </li>
+     </ul>
+    </div>
+  <div class="col-8 menu">
+    <ul class=head4>
+       <li>
+          <h3>Budget Summary Report for Year: <strong> {{ budgetyear}} </strong> </h3> 
+       </li>  
+    </ul>        
+  </div>
+</div>
+{% endblock %}

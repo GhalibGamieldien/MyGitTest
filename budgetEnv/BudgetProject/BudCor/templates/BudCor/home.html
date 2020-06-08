@@ -1,0 +1,98 @@
+{% extends "BudCor/layout.html" %}
+{% block title %}
+Home 
+{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul class=head4>
+      <li><h3>Back Office</h3></li> 
+    </ul>
+  </div>
+  <div class="col-3 menu">
+    <ul class=head4>
+      <li><h3>GRIND</h3></li> 
+    </ul>
+  </div>
+  <div class="col-4 menu">
+    <ul class=head4>
+      <li><h3>Reports</h3></li>  
+    </ul>
+  </div>
+</div>
+<div class="row">
+    <div class="col-3 menu">
+      <ul>
+        <li><strong>Capture Configuration Items</strong></li>
+        <li >
+          <form name="BudgetYearForm" method="POST">
+            {% csrf_token %}
+              <button type="submit" class="w3-button w3-indigo" formaction="{% url 'counters' %}">Counters and Splits</button></li>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="col-3 menu">
+      <ul>
+          <li>
+            <form name="BudgetYearForm" method="POST">
+              {% csrf_token %}
+                <input type="number" size=4 placeholder="Year" name="budgetyear">
+                <br>
+                <button type="submit" class="save btn btn-default" formaction="{% url 'budgetdistribution' %}">Budget Distribution</button>
+                <br>
+                <button type="submit" class="save btn btn-default" formaction="{% url 'tariffs' %}">Generate Tariffs</button>
+                <br>
+                <button type="submit" class="w3-button w3-indigo" formaction="{% url 'appsrvcost' %}">Application Server Costing</button>
+            </form>
+          </li>  
+      </ul>
+    </div>
+    <div class="col-4 menu">
+      <ul>
+        <li><a href="{% url 'reptidx' %}" class=button btn-sm>Reports</a></li>
+        <li>
+          <form name="BudgetYearForm" method="POST">
+            {% csrf_token %}
+              <input type="number" size=4 placeholder="Year" name="budgetyear">
+              <button type="submit" class="save btn btn-default" formaction="{% url 'summary' %}">Budget Summary</button>
+          </form>
+        </li>  
+        <li>
+          <form name="AppServerBillingListForm" method="POST">
+             {% csrf_token %}
+               <button type="submit" class="save btn btn-default" formaction="{% url 'asbindex' %}">Application Server Billing List</button>
+          </form>
+       </li>  
+       <li>
+         <form name="AppServerBillingListForm" method="POST">
+            {% csrf_token %}
+              <button type="submit" class="save btn btn-default" formaction="{% url 'export_asb' %}">Export Application Server Billing List</button>
+         </form>
+      </li>  
+      </ul>
+    </div>
+</div>
+<div class="row">
+  <div class="col-10 menu">
+    <ul>
+      <li><a href="{% url 'list_messages' %}" class=button btn-sm>List Messages</a></li>
+    </ul>
+  </div>
+</div>
+
+{% else %}
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li><h3>You are not logged in</h3></li>
+      <li><a href="{% url 'login' %}"><h2>Login</h2></a></li>
+  </ul>
+</div>
+</div>
+{% endif %}
+  
+{% endblock %}

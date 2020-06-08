@@ -1,0 +1,56 @@
+===== Information about the build process: =====
+Build was run at 2020-01-15 20:13:33 on host '40334aa4-19b3-45fc-668c-d4e286611c4e'
+
+Build was done on  Linux-4.4.0-157-generic using x86_64
+Build was done using cmake 3.14.0 
+
+===== Compiler flags used (from the 'sql/' subdirectory): =====
+File 'sql/CMakeFiles/sql.dir/flags.make' is not yet found.
+
+Pointer size: 8
+
+===== Feature flags used: =====
+-- Cache values
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_INSTALL_PREFIX:PATH=/home/ghalib/anaconda3/envs/budgetEnv
+COMMUNITY_BUILD:BOOL=ON
+CRYPTO_LIBRARY:FILEPATH=/home/ghalib/anaconda3/envs/budgetEnv/lib/libcrypto.so
+ENABLED_PROFILING:BOOL=ON
+ENABLE_DEBUG_SYNC:BOOL=ON
+ENABLE_GCOV:BOOL=OFF
+ENABLE_GPROF:BOOL=OFF
+EXTRA_INSTALL:BOOL=OFF
+FEATURE_SET:STRING=community
+INSTALL_LAYOUT:STRING=STANDALONE
+MYSQL_DATADIR:PATH=/home/ghalib/anaconda3/envs/budgetEnv/data
+MYSQL_KEYRINGDIR:PATH=/home/ghalib/anaconda3/envs/budgetEnv/keyring
+MYSQL_MAINTAINER_MODE:BOOL=OFF
+OPENSSL_INCLUDE_DIR:PATH=/home/ghalib/anaconda3/envs/budgetEnv/include
+OPENSSL_LIBRARY:FILEPATH=/home/ghalib/anaconda3/envs/budgetEnv/lib/libssl.so
+OPENSSL_ROOT_DIR:PATH=/tmp/build/80754af9/mysql-connector-c_1579119114672/_build_env
+PKG_INSTALL_PREFIX:PATH=/home/ghalib/anaconda3/envs/budgetEnv
+TMPDIR:PATH=P_tmpdir
+WITH_ARCHIVE_STORAGE_ENGINE:BOOL=ON
+WITH_ASAN:BOOL=OFF
+WITH_BLACKHOLE_STORAGE_ENGINE:BOOL=ON
+WITH_CLIENT_PROTOCOL_TRACING:BOOL=ON
+WITH_DEBUG:BOOL=OFF
+WITH_DEFAULT_COMPILER_OPTIONS:BOOL=ON
+WITH_DEFAULT_FEATURE_SET:BOOL=ON
+WITH_EMBEDDED_SERVER:BOOL=ON
+WITH_EXTRA_CHARSETS:STRING=all
+WITH_FEDERATED_STORAGE_ENGINE:BOOL=ON
+WITH_INNOBASE_STORAGE_ENGINE:BOOL=ON
+WITH_LIBWRAP:BOOL=OFF
+WITH_MSAN:BOOL=OFF
+WITH_NUMA:BOOL=ON
+WITH_PARTITION_STORAGE_ENGINE:BOOL=ON
+WITH_PIC:BOOL=OFF
+WITH_SSL:STRING=system
+WITH_TEST_TRACE_PLUGIN:BOOL=OFF
+WITH_UBSAN:BOOL=OFF
+WITH_UNIT_TESTS:BOOL=OFF
+WITH_VALGRIND:BOOL=OFF
+WITH_ZLIB:STRING=bundled
+
+===== EOF =====

@@ -1,0 +1,93 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+Application Server Cost List
+{% endblock %}
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.pagination ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.pagination li {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination li.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+
+<table class="table table-bordered">
+  <colgroup>
+    <col span="1" style="width:7%;background-color:antiquewhite; border: 1px solid black;">
+    <col span="1" style="width:17%;background-color:antiquewhite; border: 1px solid black;">
+    <col span="1" style="width:7%;background-color:chartreuse; border: 1px solid black; ">
+    <col span="1" style="width:7%;background-color:chartreuse; border: 1px solid black; ">
+  </colgroup>
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>App Server</th>
+        <th>Client</th>
+        <th>Cost Centre</th>
+        <th>CPU</th>
+        <th>RAM</th>
+        <th>Maint.</th>
+        <th>Software</th>
+        <th>AIX H.A.</th>
+        <th>Group SVCs</th>
+        <th>DC SVCs</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for AppServerBilling in AppServerBillings %}
+        <tr>
+          <td>{{ AppServerBilling.asb_service }}</td>
+          <td>{{ AppServerBilling.asb_name }}</td>
+          <td>{{ AppServerBilling.asb_client }}</td>
+          <td>{{ AppServerBilling.asb_billingcc }}</td>
+          <td>R {{ AppServerBilling.asb_cpu|intcomma }}</td>
+          <td>R {{ AppServerBilling.asb_ram|intcomma }}</td>
+          <td>R {{ AppServerBilling.asb_hwm|intcomma }}</td>
+          <td>R {{ AppServerBilling.asb_sfm|intcomma }}</td>
+          <td>R {{ AppServerBilling.asb_ha|intcomma }}</td>
+          <td>R {{ AppServerBilling.asb_gti|intcomma }}</td>
+          <td>R {{ AppServerBilling.asb_esc|intcomma }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if AppServerBillings.has_other_pages %}
+  <nav>
+  <ul class="pagination pg-blue pagination-sm">
+    {% if AppServerBillings.has_previous %}
+      <li><a href="?page={{ AppServerBillings.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in AppServerBillings.paginator.page_range %}
+      {% if AppServerBillings.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if AppServerBillings.has_next %}
+      <li><a href="?page={{ AppServerBillings.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+{% endblock %}

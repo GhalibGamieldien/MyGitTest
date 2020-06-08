@@ -1,0 +1,115 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+Tariffs 
+{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-4 head">
+    <ul class=head4>
+      <li><h4>AIX Service</h4></li> 
+    </ul>
+  </div>
+  <div class="col-4 head">
+    <ul class=head4>
+      <li><h4>LINUX Service</h4></li> 
+    </ul>
+   </div>
+   <div class="col-4 head">
+     <ul class=head4>
+       <li><h4>LINUX - Santam and SKY</h4></li>  
+     </ul>
+   </div>
+</div>
+<div class="row">
+  <div class="col-2 menu">
+    <ul>
+       <li>Tier 1 CPU Monthly</li>
+       <li>Tier 1 RAM Monthly</li>
+       <li>Tier 1 Hardware Maint.</li>
+       <li>Tier 1 Software Maint.</li>
+       <li>Tier 2 CPU Monthly</li>
+       <li>Tier 2 RAM Monthly</li>
+       <li>Tier 2 Hardware Maint.</li>
+       <li>Tier 2 Software maint.</li>
+       <li>Power H.A. Maint.</li>            
+       <li>Group D.C. Service</li>
+       <li>D.C. Tech. Service</li>
+    </ul>
+  </div>
+  <div class="col-2 menu">
+    <ul>
+       <li>R {{ wtariff_AIX_cpu_pht1|intcomma }}</li>
+       <li>R {{ wtariff_AIX_ram_pht1|intcomma }}</li>
+       <li>R {{ wtariff_AIX_hwm_pht1|intcomma }}</li>
+       <li>R {{ wtariff_AIX_sfm_pht1|intcomma }}</li>
+       <li>R {{ wtariff_AIX_cpu_pht2|intcomma }}</li>
+       <li>R {{ wtariff_AIX_ram_pht2|intcomma }}</li>
+       <li>R {{ wtariff_AIX_hwm_pht2|intcomma }}</li>
+       <li>R {{ wtariff_AIX_sfm_pht2|intcomma }}</li>
+       <li>R {{ wtariff_AIX_powerHA|intcomma }}</li>
+       <li>R {{ wtariff_gti_AIX|intcomma }}</li>            
+       <li>R {{ wtariff_AIX_esc|intcomma }}</li>                        
+    </ul>
+  </div>
+  <div class="col-2 menu">
+    <ul>
+       <li>CPU & Mem</li>
+       <li>Hardware Maint.</li>
+       <li>RedHat</li>
+       <li>Group D.C. Service</li>
+       <li>D.C. Tech. Service</li>
+       <li>SUSE</li>  
+    </ul>
+  </div>
+  <div class="col-2 menu">
+    <ul>
+       <li>Other Budget</li> 
+       <li>Other Budget</li> 
+       <li>R {{ wtariff_RedHat|intcomma }}</li>
+       <li>R {{ wtariff_gti_LINUX|intcomma }}</li>
+       <li>R {{ wtariff_LINUX_esc|intcomma }}</li>
+       <li>R {{ wtariff_SUSE|intcomma }}</li>  
+    </ul>
+  </div>
+  <div class="col-2 menu">
+    <ul>
+       <li>CPU & Mem</li>
+       <li>Hardware Maint.</li>
+       <li>RedHat</li> 
+       <li>Group D.C. Services</li> 
+       <li>D.C. Tech. Services</li>
+       <li>SKY RedHat</li>
+    </ul>
+  </div>
+  <div class="col-2 menu">
+    <ul>
+       <li>Other Budget</li> 
+       <li>Other Budget</li> 
+       <li>Other Budget</li> 
+       <li>Other Budget</li> 
+       <li>R {{ wtariff_LINUX_esc_Santam|intcomma }}</li>
+       <li>Other Budget</li>
+    </ul>
+  </div>
+  <div class="col-4 menu">
+
+    <ul>   
+       <li>
+          <form name="BudgetYearForm" method="POST">
+            {% csrf_token %}
+            <input type="number" size=4 placeholder="{{ budgetyear}}" name="budgetyear">
+            <button type="submit" class="w3-button w3-indigo" formaction="{% url 'appsrvcost' %}">Application Server Costing</button></li>
+          </form>
+       </li>
+    </ul> 
+  </div>
+  <div class="col-8 menu">
+    <ul>
+      <li>
+         <h3>Tariffs have been generated for Year: <strong> {{ budgetyear}} </strong> </h3> 
+      </li>  
+   </ul>  
+  </div>
+</div>
+{% endblock %}

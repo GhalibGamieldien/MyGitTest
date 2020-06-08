@@ -1,0 +1,104 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+ Application Server Details Comparison
+{% endblock %}
+{% block content %}
+<div class="row">
+
+  <div class="col-2 head">
+    <ul class=head4>
+      <li><h4>Server cost Details</h4></li> 
+    </ul>
+  </div>
+  <div class="col-2 head">
+    <ul class=head4>
+      <li><h4>{{ budgetyear1 }}</h4></li> 
+    </ul>
+  </div>
+  <div class="col-2 head">
+    <ul class=head4>
+      <li><h4>{{ budgetyear2 }}</h4></li> 
+    </ul>
+  </div>
+  <div class="col-5 head">
+    <ul class=head4>
+      <li><h4>Server Annotation Details</h4></li> 
+    </ul>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-2 menu">
+    <ul>
+       <li>Hardware</li>
+       <li>Software</li>
+       <li>High Availability</li>
+       <li>Group Data Centre</li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>
+       <li>R {{ wasb_srv_tin1|intcomma }}</li>
+       <li>R {{ wasb_srv_sfm1|intcomma }}</li>
+       <li>R {{ wasb_srv_ha1|intcomma }}</li>
+       <li>R {{ wasb_srv_gti1|intcomma }}</li>
+       <li><strong>R {{ wasb_tot_srv1|intcomma }}</strong></li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>
+       <li>R {{ wasb_srv_tin2|intcomma }}</li>
+       <li>R {{ wasb_srv_sfm2|intcomma }}</li>
+       <li>R {{ wasb_srv_ha2|intcomma }}</li>
+       <li>R {{ wasb_srv_gti2|intcomma }}</li>
+       <li><strong>R {{ wasb_tot_srv2|intcomma }}</strong></li>
+    </ul>
+  </div> 
+
+  <div class="col-2 menu">
+    <ul>
+       <li>Client</li>
+       <li>Application</li>
+       <li>Description</li>
+       <li>Application Owner</li>
+       <li>Technical Owner</li>
+    </ul>
+  </div> 
+  <div class="col-3 menu">
+    <ul>    
+      <li>{{ wsrv_client }} </li>
+       <li>{{ wsrv_application }} </li>
+       <li>{{ wsrv_serverdescription }} </li>
+       <li>{{ wsrv_appowner }}</li>
+       <li>{{ wsrv_primarytechowner }} </li>
+    </ul>
+  </div> 
+</div>
+<div class="row">
+    <div class="col-2 menu">
+      <ul>
+        <li>Operating System</li>
+        <li>Competency</li>
+        <li>Physical Host</li>
+      </ul>
+    </div> 
+    <div class="col-4 menu">
+      <ul>  
+        <li>{{ wsrv_OS }} </li> 
+        <li>{{ wsrv_competency }} </li>
+        <li>{{ wsrv_phs_name }} </li>
+      </ul>
+    </div> 
+</div>
+
+<div class="row">
+  <div class="col-11 menu">
+    <ul class=head4>
+      <li>
+         <h3>Comparison Report: Application Server <strong>{{ wname }} </strong>  for Cost Centre <strong> {{ wsrv_billingcc}} </strong></h3> 
+      </li>
+    </ul>        
+  </div>
+</div>
+{% endblock %}

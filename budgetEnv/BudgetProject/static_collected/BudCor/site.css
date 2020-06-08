@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+    
+.header {
+    background-color: lightblue ;
+    color: #ffffff;
+    padding: 1x;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+ul.head4 {
+    list-style-type: none;
+    text-decoration-style: double;
+    background-color: rgba(69, 119, 212, 0.473);
+    text-align: center; 
+    color: gold ; 
+    margin-bottom: 0;
+    padding: 0;
+
+} 
+ul.vals {
+    list-style-type: none;
+    background-color: rgba(69, 207, 212, 0.473);
+    color: rgb(17, 17, 17) ; 
+    margin-bottom: 0;
+    padding: 0;
+
+} 
+.vals li {
+    padding:  5px;
+    margin-bottom: 3px;
+    background-color: rgba(69, 207, 212, 0.473);
+    color:rgb(17, 17, 17) ;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+.menu li {
+    padding:  5px;
+    margin-bottom: 3px;
+    background-color: dodgerblue  ;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.head li {
+    padding: 3px;
+    margin-bottom: 2px;
+    background-color: green;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(245, 19, 19, 0.12), 0 1px 2px rgba(19, 18, 18, 0.24);
+} 
+.menu li:hover {
+    background-color: darkkhaki;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.message {
+    font-weight: 600;
+    color: rgba(0, 119, 255, 0.192);
+}
+.navbar {
+    background-color: lightslategray;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.navbar-item {
+    font-variant: small-caps;
+    margin-left: 30px;
+}
+
+.body-content {
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[name=message] {
+    width: 80%;
+}
+
+.message_list th,td {
+    text-align: left;
+    padding-right: 15px;
+}
+table {
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 100%;
+}
+
+tr.clickableRow { cursor: pointer; }
+
+input[name=budgetyear] {
+    max-width: 4;
+}
+input[name=ccbudgetyear] {
+    max-width: 12;
+}

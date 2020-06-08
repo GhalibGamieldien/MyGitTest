@@ -1,0 +1,7 @@
+[client]
+database = budget_data
+host = 127.0.0.1
+user = djangouser
+password = django@pwd
+default-character-set = utf8
+

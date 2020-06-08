@@ -1,0 +1,21 @@
+{% extends "BudCor/layout.html" %}
+{% block title %}
+Application error
+{% endblock %}
+{% block content %}
+
+<div class="row">
+    <div class="col-6 head">
+      <ul class=head4>
+        <li><h4>Just for starters: Error picked up, usually data, check Message Log</h4></li> 
+      </ul>
+    </div>
+</div>
+<div class="row">
+  <div class="col-9 menu">
+    <ul>
+      <li><a href="{% url 'list_messages' %}" class=btn btn-primary btn-sm>List Messages</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

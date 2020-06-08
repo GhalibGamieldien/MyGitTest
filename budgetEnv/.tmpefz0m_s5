@@ -1,0 +1,3 @@
+eval "$(/home/ghalib/anaconda3/bin/conda shell.posix hook)"
+conda activate  /home/ghalib/anaconda3/envs/budgetEnv
+nginx

@@ -1,0 +1,92 @@
+{
+  "build": "h516909a_1001",
+  "build_number": 1001,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/ghalib/anaconda3/pkgs/jansson-2.11-h516909a_1001",
+  "features": "",
+  "files": [
+    "include/jansson.h",
+    "include/jansson_config.h",
+    "lib/libjansson.a",
+    "lib/libjansson.so",
+    "lib/libjansson.so.4",
+    "lib/libjansson.so.4.11.0",
+    "lib/pkgconfig/jansson.pc"
+  ],
+  "fn": "jansson-2.11-h516909a_1001.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/ghalib/anaconda3/pkgs/jansson-2.11-h516909a_1001",
+    "type": 1
+  },
+  "md5": "395306eadf20f7ab54f358b887a72d13",
+  "name": "jansson",
+  "package_tarball_full_path": "/home/ghalib/anaconda3/pkgs/jansson-2.11-h516909a_1001.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/jansson.h",
+        "path_type": "hardlink",
+        "sha256": "b6f7f8eeace364f8a3e26de3d8d618395e938b0ad91891c0da6b499409d776c0",
+        "sha256_in_prefix": "b6f7f8eeace364f8a3e26de3d8d618395e938b0ad91891c0da6b499409d776c0",
+        "size_in_bytes": 11997
+      },
+      {
+        "_path": "include/jansson_config.h",
+        "path_type": "hardlink",
+        "sha256": "3fbee9af15d0707d4aba19e14397f8657b02b91898a8d3f03da41539798e5d1b",
+        "sha256_in_prefix": "3fbee9af15d0707d4aba19e14397f8657b02b91898a8d3f03da41539798e5d1b",
+        "size_in_bytes": 1627
+      },
+      {
+        "_path": "lib/libjansson.a",
+        "path_type": "hardlink",
+        "sha256": "0a770ecae1b7082cb111a2fdcb4c7159477f3f51481e6861b136e8663492ecc2",
+        "sha256_in_prefix": "0a770ecae1b7082cb111a2fdcb4c7159477f3f51481e6861b136e8663492ecc2",
+        "size_in_bytes": 126044
+      },
+      {
+        "_path": "lib/libjansson.so",
+        "path_type": "softlink",
+        "sha256": "683d486514db6f9902b619ad646a67700c592300f50e1ffc240d6043680532ea",
+        "size_in_bytes": 73152
+      },
+      {
+        "_path": "lib/libjansson.so.4",
+        "path_type": "softlink",
+        "sha256": "683d486514db6f9902b619ad646a67700c592300f50e1ffc240d6043680532ea",
+        "size_in_bytes": 73152
+      },
+      {
+        "_path": "lib/libjansson.so.4.11.0",
+        "path_type": "hardlink",
+        "sha256": "683d486514db6f9902b619ad646a67700c592300f50e1ffc240d6043680532ea",
+        "sha256_in_prefix": "683d486514db6f9902b619ad646a67700c592300f50e1ffc240d6043680532ea",
+        "size_in_bytes": 73152
+      },
+      {
+        "_path": "lib/pkgconfig/jansson.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "d441f1fb82d184c7e166141a9c9face2cb11b18b22044f6ea36c8408c72d1290",
+        "sha256_in_prefix": "88225d3d5ae1de4148f0f8712f1b5cfb05d8a4936f8b353c6b93ade5b34a537e",
+        "size_in_bytes": 269
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "67575ea6acee2f261ab0036fdb18fe167900027a60cb114f5f62b41e40cd2169",
+  "size": 55059,
+  "subdir": "linux-64",
+  "timestamp": 1557681189226,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/jansson-2.11-h516909a_1001.tar.bz2",
+  "version": "2.11"
+}

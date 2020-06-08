@@ -1,0 +1,108 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+Counters and Splits
+{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-4 head">
+      <ul class=head4>
+        <li><h4>AIX Service</h4></li> 
+      </ul>
+    </div>
+    <div class="col-4 head">
+      <ul class=head4>
+        <li><h4>LINUX Service</h4></li> 
+      </ul>
+    </div>
+    <div class="col-4 head">
+      <ul class=head4>
+        <li><h4>LINUX - Santam and SKY</h4></li>  
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 menu">
+       <ul>
+          <li>Server Count</li>
+          <li>Midrange</li>
+          <li>Tier 1</li>
+          <li>Tier 2</li>
+          <li>Tier 1 CPU</li>
+          <li>Tier 2 CPU</li>
+          <li>Tier 1 RAM(MB)</li>
+          <li>Tier 2 RAM(MB)</li>
+          <li>HA Processors </li>            
+       </ul>
+    </div>
+    <div class="col-2 menu">
+      <ul class=vals>
+         <li>{{ wcnt_AIX|intcomma }}</li>
+         <li>{{ wcnt_BB9498|intcomma }}</li>
+         <li>{{ wcnt_T1_AIX|intcomma }}</li>
+         <li>{{ wcnt_T2_AIX|intcomma }}</li>
+         <li>{{ wcnt_T1_cpu|intcomma }}</li>
+         <li>{{ wcnt_T2_cpu|intcomma }}</li>
+         <li>{{ wcnt_T1_ram|intcomma }}</li>
+         <li>{{ wcnt_T2_ram|intcomma }}</li>
+         <li>{{ wcnt_PHA_Procs|intcomma }}</li>            
+      </ul>
+    </div>
+     <div class="col-2 menu">
+       <ul>
+         <li>Server Count</li>
+         <li>Midrange</li>
+         <li>Data Centre Servers</li>
+         <li>Data Centre Shared</li>  
+         <li>RedHat</li> 
+         <li>SUSE Sockets</li>
+       </ul>
+     </div>
+    <div class="col-2 menu">
+       <ul>
+         <li>{{ wcnt_LINUX|intcomma }}</li>
+         <li>{{ wcnt_BB8263|intcomma }}</li>
+         <li>{{ wcnt_BCX_LINUX|intcomma }}</li>
+         <li>{{ wcnt_LINUX_Default|intcomma }}</li>  
+         <li>{{ wcnt_RedHat_Default|intcomma }}</li> 
+         <li>{{ wcnt_SUSE|intcomma }}</li>
+       </ul>
+    </div>
+    <div class="col-2 menu">
+       <ul>
+         <li>Santam Linux</li> 
+         <li>Santam RedHat</li> 
+         <li>SKY LINUX</li>
+         <li>SKY RedHat</li>
+       </ul>
+    </div>
+     <div class="col-2 menu">
+       <ul>
+         <li>{{ wcnt_LINUX_Santam|intcomma }}</li> 
+         <li>{{ wcnt_RedHat_Santam|intcomma }}</li> 
+         <li>{{ wcnt_LINUX_SKY|intcomma }}</li>
+         <li>{{ wcnt_RedHat_SKY|intcomma }}</li>
+       </ul>
+     </div>
+     <div class="col-4 menu">
+      <form name="BudgetYearForm" method="POST">
+         {% csrf_token %}
+         <div>
+           <input type="number" size=4 placeholder="2020" name="budgetyear"> 
+           
+           <button type="submit" class="save btn btn-default" formaction="{% url 'budgetdistribution' %}">Budget Distribution</button>
+           <button type="submit" class="save btn btn-default" formaction="{% url 'tariffs' %}">Generate Tariffs</button>
+          </div>
+      </form>
+     </div>
+    </div>
+    <div class="row">
+      <div class="col-8 head">
+       <ul class=head4>
+        <li>
+          <h3>Counters and splits of budget determined for application for service(s)</h3> 
+        </li>
+      </ul> 
+      </div>
+    </div>
+{% endblock %}

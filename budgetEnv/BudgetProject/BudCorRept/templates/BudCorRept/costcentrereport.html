@@ -1,0 +1,91 @@
+{% extends "BudCor/layout.html" %}
+{% load humanize %}
+{% block title %}
+Cost Centre Report
+{% endblock %}
+{% block content %}
+
+<div class="row">
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+       <li>Sub-totals</li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>    
+       <li>R {{ wasb_tot_tin|intcomma }}</li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>
+       <li>R {{ wasb_tot_sfm|intcomma }}</li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>     
+       <li>R {{ wasb_tot_ha|intcomma }}</li>
+    </ul>
+  </div> 
+  <div class="col-2 menu">
+    <ul>
+       <li>R {{ wasb_tot_gti|intcomma }}</li>
+    </ul>
+  </div> 
+</div>
+
+  
+     <table style="width:100%; table-layout:fixed; border: 1px solid black">
+      <colgroup>
+        <col span="1" style="width:10%;background-color:antiquewhite; border: 1px solid black;">
+        <col span="1" style="width:17%;background-color:chartreuse; border: 1px solid black; ">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Name</th>
+          <th>Hardware</th>
+          <th>Software</th>
+          <th>H.A. License</th>
+          <th>Services</th>
+          <th>Server Cost (p.m.)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in wasb_rows %}
+         <tr>
+            {% for item in row %}
+              <td>{{ item}} </td> 
+            {% endfor %}
+         </tr>
+        {% endfor %}
+      </tbody>
+     </table>  
+  
+ 
+ 
+<div class="row">
+ <div class="col-4 menu">
+  <ul>
+    <li>
+      <form name="ApplicationServerForm" method="POST">
+        {% csrf_token %}
+          <input type="number" size=4 placeholder="{{ budgetyear }}" name="budgetyear">
+          <input type="text" size=20 placeholder="Server Name" name="servername">
+          <button type="submit" class="save btn btn-default" formaction="{% url 'appsrvdets' %}">Application Server Details</button>
+      </form>
+    </li>
+  </ul>
+ </div>
+    <div class="col-8 menu"> 
+      <ul>
+      <li>
+         <h3>Billing Report: <strong>{{ wASBscnt }}</strong> servers costing <strong>R {{ wasb_tot|intcomma }}</strong> for Cost Centre <strong> {{ costcentre}} </strong>  for Year: <strong> {{ budgetyear}} </strong> </h3> 
+      </li>  
+    </ul>        
+  </div>
+</div>
+</div>
+
+{% endblock %}

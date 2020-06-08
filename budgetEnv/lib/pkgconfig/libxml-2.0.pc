@@ -1,0 +1,13 @@
+prefix=/home/ghalib/anaconda3/envs/budgetEnv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.9.9
+Description: libXML library version2.
+Requires:
+Libs: -L${libdir} -lxml2
+Libs.private:  -lpthread -L/home/ghalib/anaconda3/envs/budgetEnv/lib -lz -L/home/ghalib/anaconda3/envs/budgetEnv/lib -llzma -L/home/ghalib/anaconda3/envs/budgetEnv/lib -lm  
+Cflags: -I${includedir}/libxml2 -I/home/ghalib/anaconda3/envs/budgetEnv/include 

@@ -1,0 +1,11 @@
+prefix=/home/ghalib/anaconda3/envs/budgetEnv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gd
+Description: GD graphics library
+Version: 2.2.5
+Cflags: -I${includedir}
+Libs.private: -lm   -L/home/ghalib/anaconda3/envs/budgetEnv/lib -lz  -L/home/ghalib/anaconda3/envs/budgetEnv/lib -lpng16 -lz  -L/home/ghalib/anaconda3/envs/budgetEnv/lib -lfreetype  -L/home/ghalib/anaconda3/envs/budgetEnv/lib -lfontconfig -lfreetype   -ljpeg  -L/home/ghalib/anaconda3/envs/budgetEnv/lib -ltiff   -lwebp 
+Libs: -L${libdir} -lgd

@@ -1,0 +1,19 @@
+{% extends "BudCor/layout.html" %}
+{% block title %}
+<h4>Log a message</h4>
+{% endblock %}
+{% block content %}
+<form method="POST" class="log-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Log</button>
+</form>
+<br>
+<div class="row">
+    <div class="col-9 menu">
+      <ul>
+        <li><a href="{% url 'list_messages' %}" class=btn btn-primary btn-sm role=button>List Messages</a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
